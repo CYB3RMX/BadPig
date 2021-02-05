@@ -1,0 +1,6 @@
+# AUTHOR: CYB3RMX_
+#
+# Snort rules for detecting malware activity on your network!!
+
+alert tcp $HOME_NET any -> 8.210.217.79 80 (msg:"Potentially Android/Spy.SmsSpy.SM traffic detected!!"; uricontent:"/ru.html"; nocase; classtype:trojan-activity; sid:1540099; rev:1;)
+alert tcp $HOME_NET any -> 110.42.64.12 80 (msg:"Potentially Android/Spy.SmsSpy.SM traffic detected!!"; uricontent:"/api/SendContactInfo.aspx"; nocase; classtype:trojan-activity; sid:1540100; rev:1;)
