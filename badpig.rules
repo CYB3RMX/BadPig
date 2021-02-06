@@ -11,3 +11,6 @@ alert tcp $HOME_NET any -> 8.210.18.93 8888 (msg:"Potentially Trojan.Win64.Krypt
 alert tcp $HOME_NET any -> 8.210.18.93 7778 (msg:"Potentially Trojan.Win32.Meterpreter traffic detected!!"; classtype:malware-cnc; priority:10; sid:1540105; rev:1;)
 alert tcp $HOME_NET any -> 152.32.192.29 9999 (msg:"Potentially Trojan/Win32.CobaltStrike.C4183270 traffic detected!!"; uricontent:"/cm"; nocase; classtype:trojan-activity; priority:10; sid:1540106; rev:1;)
 alert tcp $HOME_NET any -> 153.92.6.92 80 (msg:"Potentially Android.Airpush.J (AdWare) traffic detected!!"; uricontent:"/images/ronaldo32.jpeg"; nocase; classtype:trojan-activity; priority:10; rev:1;)
+alert tcp $HOME_NET any -> 107.190.130.190 82 (msg:"Potentially HackTool:Win32/CobaltStrike.A traffic detected!!"; uricontent:"/dpixel"; nocase; uricontent:"/push"; nocase; classtype:trojan-activity; priority:10; rev:1;)
+alert tcp $HOME_NET any -> 45.32.41.71 8080 (msg:"Potentially Backdoor:Win32/CobaltStrike.191228 traffic detected!!"; uricontent:"/cx"; nocase; uricontent:"/9mcT"; nocase; uricontent:"/IE9CompatViewList.xml"; nocase; classtype:trojan-activity; priority:10; rev:1;)
+alert tcp $HOME_NET any -> 178.72.136.128 81 (msg:"Potentially Trojan:Win32/CobaltStrike.SS!MTB traffic detected!!"; uricontent:"/nj3Q"; nocase; uricontent:"/j.ad"; nocase; classtype:trojan-activity; priority:10; rev:1;)
